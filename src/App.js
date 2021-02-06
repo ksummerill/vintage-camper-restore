@@ -1,27 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-// adding a comment to commit
+class App extends React.Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  componentDidMount() {
+    fetch('http://localhost:3000/api/v1/projects')
+    .then(response => response.json())
+    .then(data => console.log(data))
+  }
+
+  render() {
+    return (
+      <div className="App">
+        App
+      </div>
+    );
+  }
 }
 
 export default App;
