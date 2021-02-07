@@ -1,15 +1,9 @@
 import React from 'react';
+import {connect} from 'react-redux'
+import {fetchProjects} from './actions/fetchProjects'
 import './App.css';
 
 class App extends React.Component {
-
-  componentDidMount() {
-    fetch('http://localhost:3000/api/v1/projects', {
-      method: 'GET'
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-  }
 
   render() {
     return (
@@ -20,4 +14,10 @@ class App extends React.Component {
   }
 }
 
-export default App;
+// const mapStateToProps = (state) => {
+//   return {
+//     projects: state.projects
+//   }
+// }
+
+export default connect(null, {fetchProjects})(App);
