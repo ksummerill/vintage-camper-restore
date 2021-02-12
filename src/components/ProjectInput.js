@@ -4,7 +4,9 @@ import {addProject} from '../actions/addProject'
 
 class ProjectInput extends React.Component {
 
-  state = {name: ''}
+  state = {
+    name: ''
+  }
 
   handleChange = (event) => {
     this.setState({
