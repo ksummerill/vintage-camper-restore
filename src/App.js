@@ -1,7 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux'
-import {fetchProjects} from './actions/fetchProjects'
-import './App.css';
+// import {connect} from 'react-redux'
+// import './App.css';
 import ProjectsContainer from './containers/ProjectsContainer';
 
 class App extends React.Component {
@@ -15,10 +14,4 @@ class App extends React.Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//   return {
-//     projects: state.projects
-//   }
-// }
-
-export default connect(null, {fetchProjects})(App);
+export default App;
