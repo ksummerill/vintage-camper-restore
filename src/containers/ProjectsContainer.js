@@ -15,7 +15,8 @@ class ProjectsContainer extends React.Component {
     return (
       <div>
         <Route path='/projects/new' component={ProjectInput}/>
-        <Route path='/projects' render={(routerProps) => <Projects {...routerProps} projects={this.props.projects}/>}/>
+        <Route path='/accounts/:id' />
+        <Route exact path='/projects' render={(routerProps) => <Projects {...routerProps} projects={this.props.projects}/>}/>
       </div>
     )
   }
