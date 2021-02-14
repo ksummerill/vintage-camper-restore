@@ -3,10 +3,13 @@ import React from 'react'
 // functional component
 const Project = (props) => {
 
-console.log(props)
+  let project = props.projects[props.match.params.id - 1]
+  console.log(project)
+  console.log(props)
+
   return (
     <li>
-      {props.projects.name}
+      {project ? project.name : null}
     </li>
   )
 
