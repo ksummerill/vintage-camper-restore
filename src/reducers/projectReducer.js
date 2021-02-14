@@ -4,11 +4,12 @@ export default function projectReducer(state = {projects: []}, action) {
 
   switch (action.type) {
     case 'FETCH_PROJECTS':
-      return {projects: action.payload}
+      return {projects: action.payload.data}
     case 'ADD_PROJECT':
       return {...state, projects: [...state.projects, action.payload]}
     default:
       return state
+
   }
 
   return state

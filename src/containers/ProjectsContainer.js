@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {fetchProjects} from '../actions/fetchProjects'
 import Projects from '../components/Projects'
+import Project from '../components/Project'
 import ProjectInput from '../components/ProjectInput'
 import {Route} from 'react-router-dom'
 
@@ -15,7 +16,7 @@ class ProjectsContainer extends React.Component {
     return (
       <div>
         <Route path='/projects/new' component={ProjectInput}/>
-        <Route path='/accounts/:id' />
+        <Route path='/projects/:id' render={(routerProps) => <Project {...routerProps} projects={this.props.projects}/>}/>
         <Route exact path='/projects' render={(routerProps) => <Projects {...routerProps} projects={this.props.projects}/>}/>
       </div>
     )
