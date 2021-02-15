@@ -4,7 +4,7 @@ import {fetchProjects} from '../actions/fetchProjects'
 import Projects from '../components/Projects'
 import Project from '../components/Project'
 import ProjectInput from '../components/ProjectInput'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 
 class ProjectsContainer extends React.Component {
 
@@ -15,9 +15,11 @@ class ProjectsContainer extends React.Component {
   render() {
     return (
       <div>
-        <Route path='/projects/new' component={ProjectInput}/>
-        <Route path='/projects/:id' render={(routerProps) => <Project {...routerProps} projects={this.props.projects}/>}/>
-        <Route exact path='/projects' render={(routerProps) => <Projects {...routerProps} projects={this.props.projects}/>}/>
+        <Switch>
+          <Route path='/projects/new' component={ProjectInput}/>
+          <Route path='/projects/:id' render={(routerProps) => <Project {...routerProps} projects={this.props.projects}/>}/>
+          <Route exact path='/projects' render={(routerProps) => <Projects {...routerProps} projects={this.props.projects}/>}/>
+        </Switch>
       </div>
     )
   }
