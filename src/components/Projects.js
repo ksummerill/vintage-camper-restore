@@ -4,11 +4,12 @@ import Project from './Project'
 
 // functional component
 const Projects = (props) => {
-console.log(props)
-// debugger
+
+  console.log(props)
+
   return (
     <div>
-      {props.projects.data.map(project =>
+      {props.projects.map(project =>
         <li key={project.id}>
           <Project project={project}/>
         </li>)}

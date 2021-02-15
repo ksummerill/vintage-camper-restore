@@ -1,11 +1,13 @@
 import React from 'react'
 
 // functional component
+// `props` is already giving me all the projects
 const Project = (props) => {
 
-  let project = props.projects[props.match.params.id - 1]
+console.log(props)
+  let project = props.match.params.id - 1
   console.log(project)
-  console.log(props)
+
 
   return (
     <li>
