@@ -4,10 +4,7 @@ import React from 'react'
 // `props` is already giving me all the projects
 const Project = (props) => {
 
-console.log(props)
-  let project = props.match.params.id - 1
-  console.log(project)
-
+  let project = props.projects.filter(project => project.id == props.match.params.id)[0]
 
   return (
     <li>
