@@ -26,7 +26,7 @@ class ProjectInput extends React.Component {
     return (
       <div>
         <form onSubmit={(event) => this.handleSubmit(event)}>
-          <label>Project Name</label>
+          <label>Give your project a name</label><br></br>
           <input type="text" name="name" value={this.state.name} onChange={(event) => this.handleChange(event)} placeholder="Project Name"/>
           <input type="submit" value="Submit"/>
         </form>

@@ -6,9 +6,9 @@ const Project = (props) => {
   let project = props.projects.filter(project => project.id == props.match.params.id)[0]
 
   return (
-    <li>
+    <h2>
       {project ? project.name : null}
-    </li>
+    </h2>
   )
 
 }
