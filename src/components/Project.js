@@ -4,7 +4,8 @@ import InventoriesContainer from '../containers/InventoriesContainer'
 // functional component
 const Project = (props) => {
 
-  let project = props.projects.filter(project => project.id == props.match.params.id)[0]
+  let project = props.projects[props.match.params.id - 1]
+  // let project = props.projects.filter(project => project.id == props.match.params.id)[0]
 
   return (
     <div>
