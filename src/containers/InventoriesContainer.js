@@ -9,7 +9,7 @@ class InventoriesContainer extends React.Component {
   render() {
     return (
       <div>
-        <InventoryInput />
+        <InventoryInput project={this.props.project}/>
         <Inventories inventories={this.props.project && this.props.project.inventories}/>
       </div>
     )
