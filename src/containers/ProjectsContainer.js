@@ -18,7 +18,7 @@ class ProjectsContainer extends React.Component {
         <Switch>
           <Route path='/projects/new' component={ProjectInput}/>
           <Route path='/projects/:id' render={(routerProps) => <Project {...routerProps} projects={this.props.projects}/>}/>
-          <Route exact path='/projects' render={(routerProps) => <Projects {...routerProps} projects={this.props.projects}/>}/>
+          <Route path='/projects' render={(routerProps) => <Projects {...routerProps} projects={this.props.projects}/>}/>
         </Switch>
       </div>
     )
