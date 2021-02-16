@@ -5,7 +5,6 @@ import Inventories from '../components/Inventories'
 
 class InventoriesContainer extends React.Component {
 
-
   render() {
     return (
       <div>

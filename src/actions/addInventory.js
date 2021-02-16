@@ -8,10 +8,10 @@ export const addInventory = (inventory, projectId) => {
       },
       body: JSON.stringify(inventory)
     })
-    .then(response => response.json)
+    .then(response => response.json())
     .then(project => dispatch({
-      type: ADD_INVENTORY,
-      payload: inventory
+      type: 'ADD_INVENTORY',
+      payload: project
     }))
   }
 }
