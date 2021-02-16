@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {addInventory} from '../actions/addInventory'
 
 
 class InventoryInput extends React.Component {
@@ -42,4 +43,4 @@ class InventoryInput extends React.Component {
 
 
 
-export default connect(null)(InventoryInput)
+export default connect(null, {addInventory})(InventoryInput)
