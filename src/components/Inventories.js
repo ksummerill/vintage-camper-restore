@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {deleteInventoryItem} from '../actions/deleteInventoryItem'
 
-const Inventories  = (props) => {
+const Inventories = (props) => {
 
   const handleDelete = (inventory) => {
     // debugger - inventory is grabbing the correct inventory item for deletion

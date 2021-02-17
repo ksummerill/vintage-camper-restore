@@ -1,7 +1,7 @@
 // responsible for handling the parts of the store that have to do with the Project
 
 export default function projectReducer(state = {projects: []}, action) {
-// debugger
+
   switch (action.type) {
     case 'FETCH_PROJECTS':
       return {projects: action.payload}
@@ -17,7 +17,7 @@ export default function projectReducer(state = {projects: []}, action) {
       })
       return {...state, projects: projects}
     case 'DELETE_INVENTORY_ITEM':
-    // debugger
+
       let projectsDelete = state.projects.map(project => {
         if (project.id === action.payload.id) {
           return action.payload
@@ -26,6 +26,15 @@ export default function projectReducer(state = {projects: []}, action) {
         }
       })
       return {...state, projects: projectsDelete}
+    case 'ADD_SUPPLY':
+      let projectSupply = state.projects.map(project => {
+        if (project.id === action.payload.id) {
+          return action.payload
+        } else {
+          return project
+        }
+      })
+      return {...state, projects: projectSupply}  
     default:
       return state
 
