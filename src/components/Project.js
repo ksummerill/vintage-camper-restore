@@ -1,5 +1,7 @@
 import React from 'react'
 import InventoriesContainer from '../containers/InventoriesContainer'
+import SuppliesContainer from '../containers/SuppliesContainer'
+
 
 // functional component
 const Project = (props) => {
@@ -13,6 +15,7 @@ const Project = (props) => {
         {project ? project.name : null}
       </h2>
       <InventoriesContainer project={project}/>
+      <SuppliesContainer project={project}/>
     </div>
   )
 
