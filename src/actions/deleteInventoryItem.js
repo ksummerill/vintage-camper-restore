@@ -1,4 +1,4 @@
-export const deleteInventoryItem = (projectId, inventoryId) => {
+export const deleteInventoryItem = (inventoryId, projectId) => {
 
   return (dispatch) => {
     return fetch(`http://localhost:3000/api/v1/projects/${projectId}/inventories/${inventoryId}`, {
