@@ -16,6 +16,16 @@ export default function projectReducer(state = {projects: []}, action) {
         }
       })
       return {...state, projects: projects}
+    case 'DELETE_INVENTORY_ITEM':
+    // debugger
+      let projectsDelete = state.projects.map(project => {
+        if (project.id === action.payload.id) {
+          return action.payload
+        } else {
+          return project
+        }
+      })
+      return {...state, projects: projectsDelete}
     default:
       return state
 
