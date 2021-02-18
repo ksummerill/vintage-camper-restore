@@ -1,6 +1,6 @@
 import React from 'react';
 // import {connect} from 'react-redux'
-// import './App.css';
+import './App.css';
 import ProjectsContainer from './containers/ProjectsContainer';
 
 class App extends React.Component {
