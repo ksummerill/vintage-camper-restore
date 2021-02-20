@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {deleteInventoryItem} from '../actions/deleteInventoryItem'
+// import Button from 'react-bootstrap/Button'
 
 const Inventories = (props) => {
 
