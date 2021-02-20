@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addInventory} from '../actions/addInventory'
-
+import Button from 'react-bootstrap/Button'
 
 class InventoryInput extends React.Component {
 
@@ -28,19 +28,18 @@ class InventoryInput extends React.Component {
   render() {
     return(
       <div>
-        <h3>Add items to your Inventory</h3>
+        <h3>Inventory</h3>
+        <h5>Add items to your Inventory</h5>
           <form onSubmit={this.handleSubmit}>
-            <label>Name</label>
-              <input type="text" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Item name"/>
-            <label>Description</label>
-              <input type="text" name="description" value={this.state.description} onChange={this.handleChange} placeholder="description"/>
-            <input type="submit" value="Submit"/>
+            <input type="text" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Item name"/><br></br>
+            <input type="text" name="description" value={this.state.description} onChange={this.handleChange} placeholder="description"/><br></br>
+            <br></br>
+            <Button as="input" type="submit" value="Submit" />
           </form>
       </div>
     )
   }
 }
-
 
 
 export default connect(null, {addInventory})(InventoryInput)

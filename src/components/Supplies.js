@@ -1,6 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {deleteSupplyItem} from '../actions/deleteSupplyItem'
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
+import ListGroup from 'react-bootstrap/ListGroup'
 
 const Supplies = (props) => {
 
@@ -9,11 +12,14 @@ const Supplies = (props) => {
   }
 
   return(
-    <div className="list-items">
-      {props.supplies && props.supplies.map(supply =>
-        <li key={supply.id}>{supply.item} <button onClick={() => handleDelete(supply)}>X</button></li>
-      )}
-    </div>
+    <Card style={{ width: '24rem' }}>
+      <Card.Title>Supplies</Card.Title>
+        <ListGroup variant="flush">
+          {props.supplies && props.supplies.map(supply =>
+            <ListGroup.Item key={supply.id}>{supply.item} <Button variant="outline-secondary" onClick={() => handleDelete(supply)}>X</Button></ListGroup.Item>
+          )}
+        </ListGroup>
+    </Card>
   )
 
 }

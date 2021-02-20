@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addProject} from '../actions/addProject'
+import Button from 'react-bootstrap/Button'
+
 
 class ProjectInput extends React.Component {
 
@@ -28,7 +30,7 @@ class ProjectInput extends React.Component {
         <form onSubmit={(event) => this.handleSubmit(event)}>
           <label>Give your project a name</label><br></br>
           <input type="text" name="name" value={this.state.name} onChange={(event) => this.handleChange(event)} placeholder="Project Name"/>
-          <input type="submit" value="Submit"/>
+          <Button as="input" type="submit" value="Submit" />
         </form>
       </div>
     )

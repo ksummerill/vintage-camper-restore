@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addSupply} from '../actions/addSupply'
+import Button from 'react-bootstrap/Button'
+
 
 
 class SupplyInput extends React.Component {
@@ -28,9 +30,9 @@ class SupplyInput extends React.Component {
       <div>
         <h3>Supplies</h3>
           <form onSubmit={this.handleSubmit}>
-            <label>Item</label>
-              <input type="text" name="item" value={this.state.item} onChange={this.handleChange} placeholder="Item name"/>
-            <input type="submit" value="Submit"/>
+            <input type="text" name="item" value={this.state.item} onChange={this.handleChange} placeholder="Supply item"/><br></br>
+            <br></br>
+            <Button as="input" type="submit" value="Submit" />
           </form>
       </div>
     )
