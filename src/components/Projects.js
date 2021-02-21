@@ -2,7 +2,6 @@ import React from 'react'
 import {Route, Link} from 'react-router-dom'
 import Project from './Project'
 
-// functional component
 const Projects = (props) => {
 
   return (
