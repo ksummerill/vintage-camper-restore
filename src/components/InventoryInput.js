@@ -28,8 +28,7 @@ class InventoryInput extends React.Component {
   render() {
     return(
       <div>
-        <h3>Inventory</h3>
-        <h5>Add items to your Inventory</h5>
+        <h3>Add items to your Inventory</h3>
           <form onSubmit={this.handleSubmit}>
             <input type="text" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Item name"/><br></br>
             <input type="text" name="description" value={this.state.description} onChange={this.handleChange} placeholder="description"/><br></br>

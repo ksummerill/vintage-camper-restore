@@ -28,7 +28,7 @@ class SupplyInput extends React.Component {
   render() {
     return(
       <div>
-        <h3>Supplies</h3>
+        <h3>Add Supplies to your list</h3>
           <form onSubmit={this.handleSubmit}>
             <input type="text" name="item" value={this.state.item} onChange={this.handleChange} placeholder="Supply item"/><br></br>
             <br></br>
