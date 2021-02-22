@@ -5,6 +5,8 @@ export default function projectReducer(state = {projects: []}, action) {
   switch (action.type) {
     case 'FETCH_PROJECTS':
       return {projects: action.payload}
+    // case 'FETCH_INVENTORY':
+    //   return {inventory: action.payload}
     case 'ADD_PROJECT':
       return {...state, projects: [...state.projects, action.payload]}
     case 'ADD_INVENTORY':
@@ -42,7 +44,7 @@ export default function projectReducer(state = {projects: []}, action) {
           return project
         }
       })
-      return {...state, projects: supplyDelete}  
+      return {...state, projects: supplyDelete}
     default:
       return state
 
