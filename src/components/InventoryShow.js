@@ -24,4 +24,10 @@ const InventoryShow = (props) => {
   )
 }
 
-export default connect(null, {deleteInventoryItem})(InventoryShow)
+const mapStateToProps = state => {
+  return {
+    inventories: state.inventories
+  }
+}
+
+export default connect(mapStateToProps, {deleteInventoryItem})(InventoryShow)
