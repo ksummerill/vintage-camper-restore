@@ -24,9 +24,11 @@ const InventoryShow = (props) => {
   )
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, {match}) => {
+  const project = state.projects.find(project => project.id === parseInt(match.params.projectId))
+  // debugger
   return {
-    inventories: state.inventories
+    inventory: project.inventories.find(inventory => inventory.id === parseInt(match.params.id))
   }
 }
 
