@@ -3,8 +3,6 @@ import {connect} from 'react-redux'
 import {addSupply} from '../actions/addSupply'
 import Button from 'react-bootstrap/Button'
 
-
-
 class SupplyInput extends React.Component {
 
   state = {
