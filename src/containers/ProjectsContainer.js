@@ -5,6 +5,7 @@ import Projects from '../components/Projects'
 import Project from '../components/Project'
 import Homepage from '../components/Homepage'
 import ProjectInput from '../components/ProjectInput'
+import InventoryShow from '../components/InventoryShow'
 import {Route, Switch} from 'react-router-dom'
 
 class ProjectsContainer extends React.Component {
@@ -18,9 +19,11 @@ class ProjectsContainer extends React.Component {
       <div>
         <Switch>
           <Route path='/projects/new' component={ProjectInput}/>
+          <Route path='/projects/:projectId/inventories/:id' component={InventoryShow}/>
           <Route path='/projects/:id' render={(routerProps) => <Project {...routerProps} projects={this.props.projects}/>}/>
           <Route path='/projects' render={(routerProps) => <Projects {...routerProps} projects={this.props.projects}/>}/>
           <Route exact path='/' render={(routerProps) => <Homepage {...routerProps} projects={this.props.projects}/>}/>
+
         </Switch>
       </div>
     )

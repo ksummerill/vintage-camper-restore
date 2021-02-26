@@ -1,8 +1,6 @@
 import React from 'react'
 import InventoryInput from '../components/InventoryInput'
 import Inventories from '../components/Inventories'
-import InventoryShow from '../components/InventoryShow'
-import {Route, Switch} from 'react-router-dom'
 
 class InventoriesContainer extends React.Component {
 
@@ -14,7 +12,6 @@ class InventoriesContainer extends React.Component {
       </div>
     )
   }
-
 }
 
 export default InventoriesContainer
