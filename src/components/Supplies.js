@@ -7,6 +7,8 @@ import ListGroup from 'react-bootstrap/ListGroup'
 
 const Supplies = (props) => {
 
+  // console.log(props)
+
   const handleDelete = (supply) => {
     props.deleteSupplyItem(supply.id, supply.project_id)
   }

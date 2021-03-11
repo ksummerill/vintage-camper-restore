@@ -1,4 +1,6 @@
-export const addVote = (vote, projectId) => {
+export const addVote = (newVoteCount, projectId) => {
+
+  debugger
 
   return(dispatch) => {
     fetch(`http://localhost:3000/api/v1/projects/${projectId}/votes`, {
@@ -6,7 +8,7 @@ export const addVote = (vote, projectId) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(vote)
+      body: JSON.stringify(newVoteCount)
     })
     .then(response => response.json())
     .then(project => dispatch({
