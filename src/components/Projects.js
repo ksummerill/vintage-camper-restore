@@ -1,6 +1,7 @@
 import React from 'react'
 import {Route, Link} from 'react-router-dom'
 import Project from './Project'
+import Vote from './Vote'
 
 const Projects = (props) => {
 
@@ -9,6 +10,7 @@ const Projects = (props) => {
       {props.projects.map(project =>
         <div key={project.id}>
           <Link to={`/projects/${project.id}`}>{project.name}</Link>
+          <Vote />
         </div>)}
     </div>
   )
