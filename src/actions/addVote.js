@@ -1,7 +1,5 @@
 export const addVote = (newVoteCount, projectId) => {
 
-  debugger
-
   return(dispatch) => {
     fetch(`http://localhost:3000/api/v1/projects/${projectId}/votes`, {
       method: 'POST',

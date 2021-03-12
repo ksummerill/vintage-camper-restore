@@ -5,31 +5,23 @@ import {addVote} from '../actions/addVote'
 
 const Votes = (props) => {
 
-  // props.votes.projects gives me an array of projects
-  // find the project whose button was clicked and pass that project's id
-  // to addVote via my handleVote function
-
-  console.log(props)
-
-  // let votedProject = props.projects[props.match.params.id - 1]
-
-  // increment the count by 1 and call addVote with that new number
+  // increment the count by 1 and call addVote with that new number + project id
   const handleVote = (e) => {
     const buttonValue = parseInt(e.target.value)
     let newVoteCount = buttonValue + 1
-    addVote(newVoteCount)
-    // debugger
-    // this.props.addVote(this.state, this.props.project.id)
+    props.addVote(newVoteCount, props.project.id)
   };
 
+  const voteTally = props.project.votes.length
 
     return (
       <div>
         <Button variant="outline-secondary" onClick={handleVote} value={1}>❤️</Button>
-        <p>counter here</p>
+        <div>
+          <p>{voteTally}</p>
+        </div>
       </div>
     );
-
 }
 
 export default connect(null, {addVote})(Votes)

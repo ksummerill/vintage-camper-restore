@@ -5,14 +5,12 @@ import Vote from './Vote'
 
 const Projects = (props) => {
 
-  console.log(props)
-
   return (
     <div>
       {props.projects.map(project =>
         <div key={project.id}>
           <Link to={`/projects/${project.id}`}>{project.name}</Link>
-          <Vote votes={props}/>
+          <Vote project={project} votes={props}/>
         </div>)}
     </div>
   )
